@@ -1,0 +1,137 @@
+/* =========================
+   Base Styles
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* =========================
+   Header (Flexbox)
+   ========================= */
+.header {
+  display: flex;                 /* Flexbox for layout */
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #2c3e50;
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #1abc9c;
+}
+
+/* =========================
+   Hero Section
+   ========================= */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #ecf0f1;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background: #1abc9c;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #16a085;
+}
+
+/* =========================
+   Content (CSS Grid)
+   ========================= */
+.content {
+  display: grid;                      /* Grid layout */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.card {
+  background: #bdc3c7;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* =========================
+   Footer
+   ========================= */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #2c3e50;
+  color: #fff;
+}
+
+/* =========================
+   Responsive Breakpoints
+   ========================= */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr); /* 2-column grid */
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;  /* Stack logo + nav */
+    text-align: center;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .content {
+    grid-template-columns: 1fr; /* Single-column grid */
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+}
